@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Management System</title>
+</head>
+<body>
+<div class="container my-2">
+    <h1>Product List</h1>
+          <a th:href ="@{/showNewProductsForm}" class="btn btn-primary btn-sm mb-3"> Add Products</a>
+    <table border="1" class = "table table-striped table-responsive-md">
+
+        <thead>
+        <tr>
+            <th>Shoe Id</th>
+            <th>Brand</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+
+        <th:block th:each="product: ${listProducts}">
+
+            <tbody>
+
+            <td th:text="${product.id}"></td>
+
+            <td th:text="${product.brand}"></td>
+
+            <td th:text="${product.size}"></td>
+
+            <td th:text="${product.price}"></td>
+
+            <td th:text="${product.stock}"></td>
+
+            <td th:text="${product. quantity }"></td>
+
+            <td th:text= <a th:href ="@{/showNewProductsForm}"></td>
+
+            </tbody></td>
+
+        </th:block>
+
+        <!--add a delete button-->
+    </table>
+</div>
+
+</body>
+</html>
