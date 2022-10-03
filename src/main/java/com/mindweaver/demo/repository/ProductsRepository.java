@@ -1,5 +1,6 @@
-package com.mindweaver.demo;
+package com.mindweaver.demo.repository;
 
+import com.mindweaver.demo.model.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

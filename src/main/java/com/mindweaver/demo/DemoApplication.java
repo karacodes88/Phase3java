@@ -1,6 +1,8 @@
 package com.mindweaver.demo;
 
 
+import com.mindweaver.demo.model.Products;
+import com.mindweaver.demo.repository.ProductsRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +22,7 @@ public class DemoApplication {
 		Products Adidas_Superstars = new Products(
 				null,
 				"Adidas Superstars",
-				"6",
+				6,
 				100.00,
 				25,
 				1
@@ -28,7 +30,7 @@ public class DemoApplication {
 		Products Adidas_Stan_Smith= new Products(
 				null,
 				"Adidas Stan Smith",
-				"5",
+				5,
 				75.00,
 				10,
 				1
@@ -36,7 +38,7 @@ public class DemoApplication {
 		Products Balance_327 = new Products(
 				null,
 				"New Balance 327",
-				"8",
+				8,
 				165.00,
 				20,
 				1

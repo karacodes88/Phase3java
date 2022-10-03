@@ -1,4 +1,4 @@
-package com.mindweaver.demo;
+package com.mindweaver.demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +20,7 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.AUTO )
     private Long id;
     private String brand;
-    private String size;
+    private double size;
     private double price;
     private int stock;
     private int quantity;

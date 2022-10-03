@@ -1,6 +1,8 @@
-package com.mindweaver.demo;
+package com.mindweaver.demo.service;
 
 
+import com.mindweaver.demo.model.Products;
+import com.mindweaver.demo.repository.ProductsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,11 @@ public class ProductService {
     }
 
     public void saveProducts(Products products) {
+        productRepo.save(products);
+    }
+
+    public void deleteProduct(Long id){
+        productRepo.deleteById(id);
     }
 }
-//SAVE ALL CRUD HERE?
+
