@@ -42,7 +42,7 @@ public class ProductView {
                                @RequestParam int stock,
                                @RequestParam int quantity) {
 
-        Products product = new Products( null, brand,size, price, stock, quantity);
+        Products product = new Products(null, brand, size, price, stock, quantity);
         productService.saveProducts(product);
         //save products to database;
         return "redirect:/product";
@@ -53,7 +53,4 @@ public class ProductView {
         productService.deleteProduct(id);
         return "redirect:/product";
     }
-
-
-
 }
